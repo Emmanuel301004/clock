@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clock App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analog Clock</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card" id="clock"></div>
-    <script src="script.js"></script>
+  <div class="clock">
+    <div class="hand hour" id="hour"></div>
+    <div class="hand minute" id="minute"></div>
+    <div class="hand second" id="second"></div>
+    <div class="center"></div>
+    <div class="numbers">
+      <div class="number" style="transform: rotate(0deg) translateX(-50%) translateY(-150%);">12</div>
+      <div class="number" style="transform: rotate(30deg) translateX(-50%) translateY(-150%);">1</div>
+      <div class="number" style="transform: rotate(60deg) translateX(-50%) translateY(-150%);">2</div>
+      <div class="number" style="transform: rotate(90deg) translateX(-50%) translateY(-150%);">3</div>
+      <div class="number" style="transform: rotate(120deg) translateX(-50%) translateY(-150%);">4</div>
+      <div class="number" style="transform: rotate(150deg) translateX(-50%) translateY(-150%);">5</div>
+      <div class="number" style="transform: rotate(180deg) translateX(-50%) translateY(-150%);">6</div>
+      <div class="number" style="transform: rotate(210deg) translateX(-50%) translateY(-150%);">7</div>
+      <div class="number" style="transform: rotate(240deg) translateX(-50%) translateY(-150%);">8</div>
+      <div class="number" style="transform: rotate(270deg) translateX(-50%) translateY(-150%);">9</div>
+      <div class="number" style="transform: rotate(300deg) translateX(-50%) translateY(-150%);">10</div>
+      <div class="number" style="transform: rotate(330deg) translateX(-50%) translateY(-150%);">11</div>
+    </div>
+  </div>
+  <div class="set-time">
+    <label for="time">Set Time (HH:MM:SS):</label>
+    <input type="time" id="time" step="1">
+    <button onclick="setTime()">Set Time</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
